@@ -22,4 +22,7 @@ public class Note {
     @NotEmpty(message = "Notiz darf nicht leer sein")
     private String note;
 
+    @NotEmpty(message = "Es muss ein Benutzer vorhanden sein")
+    private String username;
+
 }
