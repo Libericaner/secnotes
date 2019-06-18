@@ -17,6 +17,10 @@ public class NoteController {
 
     public NoteController(NoteService noteService) {
         this.noteService = noteService;
+
+        noteService.add(new Note("Todos", "Brot holen"), "joel");
+        noteService.add(new Note("Schule", "Test lernen"), "joel");
+        noteService.add(new Note("Sport", "Fallschirm nähen"), "david");
     }
 
     @GetMapping("/notes")

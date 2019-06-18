@@ -1,7 +1,6 @@
 package com.security.webapp.domain;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
@@ -11,6 +10,7 @@ import java.util.UUID;
 @Entity
 @Setter
 @Getter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Note {
 
     @Id
@@ -26,9 +26,14 @@ public class Note {
     @NotEmpty(message = "Es muss ein Benutzer vorhanden sein")
     private String username;
 
+    public Note(@NotEmpty(message = "Titel darf nicht leer sein") String title,
+                @NotEmpty(message = "Notiz darf nicht leer sein") String note) {
+        this.title = title;
+        this.note = note;
+    }
+
     @PrePersist
     void enhance() {
         this.id = UUID.randomUUID().toString();
     }
-
 }

@@ -25,28 +25,9 @@ public class JwtService {
 
         return Jwts.builder()
                 .setSubject(user.getName())
-                .claim("roles", getCommaSeparatedListOfAutorities(user.getAuthorities()))
                 .setHeaderParam("typ", "JWT")
                 .setExpiration(new Date(System.currentTimeMillis() + config.getTokenLifetime()))
                 .signWith(config.getSignatureAlgorithm(), config.getBase64EncodedSigningKey())
                 .compact();
-    }
-
-    private String getCommaSeparatedListOfAutorities(Collection<GrantedAuthority> authorities) {
-
-        final String separator = ",";
-
-        StringBuilder commaSeparatedList = new StringBuilder();
-        authorities.forEach(authority -> commaSeparatedList.append(authority.getAuthority()).append(separator));
-
-        int lastSeparator = commaSeparatedList.lastIndexOf(separator);
-
-        if (!commaSeparatedList.toString().contains(separator)) {
-            return commaSeparatedList.toString();
-        }
-
-        commaSeparatedList.deleteCharAt(lastSeparator);
-
-        return commaSeparatedList.toString();
     }
 }

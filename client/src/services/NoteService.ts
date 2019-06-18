@@ -3,7 +3,11 @@ import {Note} from '../domain/domain';
 import {HttpClient} from '@angular/common/http';
 import {environment} from 'src/environments/environment';
 import {take} from 'rxjs/operators';
+import {Injectable} from '@angular/core';
 
+@Injectable({
+  providedIn: 'root'
+})
 export class NoteService {
 
   private env = environment;

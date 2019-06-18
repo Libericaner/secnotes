@@ -1,3 +1,18 @@
-<p>
-  note-dialog works!
-</p>
+<h2 mat-dialog-title>{{note.title}}</h2>
+<mat-dialog-content>
+  <form [formGroup]="form" *ngIf="note">
+    <mat-form-field>
+      <mat-label>Title</mat-label>
+      <input matInput type="text" formControlName="title" [value]="note.title">
+    </mat-form-field>
+    <br/>
+    <mat-form-field>
+      <mat-label>Note</mat-label>
+      <textarea matInput type="textarea" formControlName="note" [value]="note.note"></textarea>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>cancel</button>
+  <button mat-button (click)="save()">save</button>
+</mat-dialog-actions>

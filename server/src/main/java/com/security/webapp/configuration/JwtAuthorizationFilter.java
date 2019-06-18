@@ -16,7 +16,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 
 @Slf4j
 public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
@@ -37,7 +36,7 @@ public class JwtAuthorizationFilter extends BasicAuthenticationFilter {
         // get authorization-header
         String header = request.getHeader(jwtConfig.getHttpHeader());
 
-        if (header == null || !header.startsWith(jwtConfig.getTokenPrefix())) {
+        if (header == null) {
             chain.doFilter(request, response);
             return;
         }

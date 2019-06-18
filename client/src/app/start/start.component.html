@@ -1,3 +1,9 @@
-<p>
-  start works!
-</p>
+<mat-card *ngFor="let note of notes">
+  <mat-card-title>{{note.title}}</mat-card-title>
+  <mat-card-content>{{note.note}}</mat-card-content>
+  <mat-card-actions>
+    <button (click)="delete(note)">delete</button>
+    <button (click)="openDialog(note)">edit</button>
+  </mat-card-actions>
+</mat-card>
+<button (click)="createDialog()"><span><mat-icon>add</mat-icon></span>new note</button>
