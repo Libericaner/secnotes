@@ -1,4 +1,4 @@
-package Domain.Entity;
+package com.security.webapp.Domain.Entity;
 
 import lombok.Getter;
 import lombok.Setter;

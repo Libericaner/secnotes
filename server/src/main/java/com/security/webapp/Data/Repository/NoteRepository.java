@@ -1,6 +1,6 @@
-package Data.Repository;
+package com.security.webapp.Data.Repository;
 
-import Domain.Entity.Note;
+import com.security.webapp.Domain.Entity.Note;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

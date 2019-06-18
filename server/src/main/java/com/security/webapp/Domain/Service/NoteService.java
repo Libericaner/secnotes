@@ -1,10 +1,9 @@
-package Domain.Service;
+package com.security.webapp.Domain.Service;
 
-import Data.Repository.NoteRepository;
-import Domain.Entity.Note;
+import com.security.webapp.Data.Repository.NoteRepository;
+import com.security.webapp.Domain.Entity.Note;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,8 +15,9 @@ public class NoteService {
     NoteRepository noteRepository;
 
     public String auth() {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        return auth.getPrincipal().toString();
+       // Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+       // return auth.getPrincipal().toString();
+        return null;
     }
 
     public List<Note> getAllNotes(){

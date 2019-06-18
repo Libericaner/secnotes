@@ -1,8 +1,9 @@
-package Presentation.Controller;
+package com.security.webapp.Presentation.Controller;
 
-import Domain.Entity.Note;
-import Domain.Service.NoteService;
+import com.security.webapp.Domain.Entity.Note;
+import com.security.webapp.Domain.Service.NoteService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -37,6 +38,24 @@ public class NoteController {
     @DeleteMapping("/note/{id}")
     public void deleteNote(@PathVariable long id){
         noteService.delete(id);
+    }
+
+
+
+
+
+    // Method to serve the guest page!
+    @GetMapping(value= "/guest")
+    public ResponseEntity<String> guest() {
+        System.out.println("Showing guest page.");
+        return new ResponseEntity<String>("Hello from guest page!", HttpStatus.OK);
+    }
+
+    // Method to serve the secure/administration page!
+    @GetMapping(value= "/admin")
+    public ResponseEntity<String> admin() {
+        System.out.println("Showing administrator page.");
+        return new ResponseEntity<String>("Welcome to secure/admin page!", HttpStatus.OK);
     }
 
 }
