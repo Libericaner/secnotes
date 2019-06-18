@@ -15,3 +15,11 @@ jwt:
   token-lifetime: 300000
   signing-key: 5ab88be4-676f-4ce1-ac8b-f1d838b4ae83
 debug: false
+
+server:
+  port: 8181
+  ssl:
+    key-store-type: JKS
+    key-store: classpath:keystore.jks
+    key-store-password: sml12345
+    key-alias: tomcat
