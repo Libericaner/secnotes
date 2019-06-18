@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NoteDatasource} from '../../datasources/NoteDatasource';
 
 @Component({
   selector: 'app-start',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StartComponent implements OnInit {
 
-  constructor() { }
+  constructor(private readonly noteDatasource: NoteDatasource) { }
 
   ngOnInit() {
   }

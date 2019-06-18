@@ -1,0 +1,12 @@
+/mnt/sda1/Projekte/secnotes/server/src/main/java/com/security/webapp/domain/NoteRepository.java
+/mnt/sda1/Projekte/secnotes/server/src/main/java/com/security/webapp/configuration/WebSecurityConfig.java
+/mnt/sda1/Projekte/secnotes/server/src/main/java/com/security/webapp/controller/NoteController.java
+/mnt/sda1/Projekte/secnotes/server/src/main/java/com/security/webapp/configuration/JwtUserDto.java
+/mnt/sda1/Projekte/secnotes/server/src/main/java/com/security/webapp/service/NoteService.java
+/mnt/sda1/Projekte/secnotes/server/src/main/java/com/security/webapp/WebappApplication.java
+/mnt/sda1/Projekte/secnotes/server/src/main/java/com/security/webapp/configuration/JwtAuthorizationFilter.java
+/mnt/sda1/Projekte/secnotes/server/src/main/java/com/security/webapp/configuration/JwtAuthenticationFilter.java
+/mnt/sda1/Projekte/secnotes/server/src/main/java/com/security/webapp/domain/Note.java
+/mnt/sda1/Projekte/secnotes/server/src/main/java/com/security/webapp/configuration/UserRegistry.java
+/mnt/sda1/Projekte/secnotes/server/src/main/java/com/security/webapp/configuration/JwtService.java
+/mnt/sda1/Projekte/secnotes/server/src/main/java/com/security/webapp/configuration/JwtConfig.java

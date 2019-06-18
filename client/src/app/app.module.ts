@@ -6,19 +6,24 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { StartComponent } from './start/start.component';
 import { NoteDialogComponent } from './note-dialog/note-dialog.component';
+import { NoteCreateDialogComponent } from './note-create-dialog/note-create-dialog.component';
+import {CdkTableModule} from '@angular/cdk/table';
+import { NoteDatasource } from 'src/datasources/NoteDatasource';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     StartComponent,
-    NoteDialogComponent
+    NoteDialogComponent,
+    NoteCreateDialogComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CdkTableModule
   ],
-  providers: [],
+  providers: [NoteDatasource],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
