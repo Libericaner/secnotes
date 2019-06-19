@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  SERVER_HOST: 'http://localhost:8080',
+  SERVER_HOST: 'https://localhost:8181',
   LOGIN_API: '/login',
   NOTES_API: '/api/notes',
   NOTE_API: '/api/note'
